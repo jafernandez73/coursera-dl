@@ -6,7 +6,7 @@
 [![Latest version on PyPI](https://img.shields.io/pypi/v/coursera-dl.svg)](https://pypi.python.org/pypi/coursera-dl)
 [![Code Climate](https://codeclimate.com/github/coursera-dl/coursera-dl/badges/gpa.svg)](https://codeclimate.com/github/coursera-dl/coursera-dl)
 
-Replaced Positional arguments class_names to optioanl arguments (--class_names) to allow class_names started with '-'
+Replaced Positional arguments class_names to optional arguments (--class_names) to allow class_names started with '-'
 
 <!-- TOC -->
 
