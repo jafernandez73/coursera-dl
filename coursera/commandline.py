@@ -40,16 +40,19 @@ def parse_args(args=None):
 
     conf_file_path = os.path.join(os.getcwd(), LOCAL_CONF_FILE_NAME)
     if os.path.isfile(conf_file_path):
-        parse_kwargs["default_config_files"] = [conf_file_path]
+        parse_kwargs["default_config_files"] = [conf_file_path] 
     parser = argparse.ArgParser(**parse_kwargs)
 
     # Basic options
     group_basic = parser.add_argument_group('Basic options')
 
     group_basic.add_argument(
-        'class_names',
-        action='store',
+        '-cn',
+        '--class_names',
         nargs='*',
+        dest='class_names',
+        action='store',
+        default=None,
         help='name(s) of the class(es) (e.g. "ml-005")')
 
     group_basic.add_argument(
