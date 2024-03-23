@@ -137,15 +137,7 @@ def list_courses(args):
     @param args: Command-line arguments.
     @type args: namedtuple
     """
-<<<<<<< HEAD:coursera/coursera_dl.py
-    session = get_session()
-    if args.cookies_cauth:
-        session.cookies.set('CAUTH', args.cookies_cauth)
-    else:
-        login(session, args.username, args.password)
-=======
     session = create_session(args)
->>>>>>> original:cs_dlp/main.py
     extractor = CourseraExtractor(session)
     courses = extractor.list_courses()
     logging.info('Found %d courses', len(courses))
