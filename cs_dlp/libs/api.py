@@ -516,10 +516,12 @@ class VideosV1(object):
 
     @staticmethod
     def from_json(data):
-
-        videos = [VideoV1(resolution, links['mp4VideoUrl'])
-                  for resolution, links
-                  in data['sources']['byResolution'].items()]
+        videos = []
+        for resolution, links in data['sources']['byResolution'].items():
+            try:
+                videos.append(VideoV1(resolution, links['mp4VideoUrl']))
+            except:
+                pass
         videos.sort(key=lambda video: video.resolution, reverse=True)
 
         videos = OrderedDict(

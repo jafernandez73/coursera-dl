@@ -170,45 +170,24 @@ There are currently two supported ways to do so: you can have `cs-dlp` get it au
 Refer to `cs-dlp --help` for a complete, up-to-date reference on the runtime options
 supported by this utility.
 
-<<<<<<< HEAD
-Run the script to download the materials by providing your Coursera account
-credentials (e.g. email address and password or a `~/.netrc` file), the
-class names, as well as any additional parameters:
-```
-    General:                     coursera-dl -u <user> -p <pass> --class_names=modelthinking-004
 
-    With CAUTH parameter:	 coursera-dl -ca 'some-ca-value-from-browser' --class_names=modelthinking-004
-=======
 Run the script to download the materials by providing your Coursera CAUTH cookie,
 the class names, as well as any additional parameters:
 
->>>>>>> original
 ```
 cs-dlp --cauth-auto chrome modelthinking-004
 ```
 
 Here are some examples of how to invoke `cs-dlp` from the command line:
 ```
-<<<<<<< HEAD
-    Without -p field:            coursera-dl -u <user> --class_names=modelthinking-004
-    Filter by section name:      coursera-dl -u <user> -p <pass> -sf "Chapter_Four" --class_names=crypto-004
-    Filter by lecture name:      coursera-dl -u <user> -p <pass> -lf "3.1_" --class_names=ml-2012-002
-    Download only ppt files:     coursera-dl -u <user> -p <pass> -f "ppt" --class_names=qcomp-2012-001
-    Use a ~/.netrc file:         coursera-dl -n -- --class_names=matrix-001
-    Get the preview classes:     coursera-dl -n -b ni-001
-	Download videos at 720p:     coursera-dl -n --video-resolution 720p ni-001
-    Specify download path:       coursera-dl -n --path=C:\Coursera\Classes\ --class_names=comnetworks-002
-    Display help:                coursera-dl --help
-=======
-    Multiple classes:            cs-dlp --cauth-auto chrome saas historyofrock1-001 algo-2012-002
-    Filter by section name:      cs-dlp --cauth-auto chrome -sf "Chapter_Four" crypto-004
-    Filter by lecture name:      cs-dlp --cauth-auto chrome -lf "3.1_" ml-2012-002
-    Download only ppt files:     cs-dlp --cauth-auto chrome -f "ppt" qcomp-2012-001
-    Get the preview classes:     cs-dlp --cauth-auto chrome -b ni-001
-	Download videos at 720p:     cs-dlp --cauth-auto chrome --video-resolution 720p ni-001
-    Specify download path:       cs-dlp --cauth-auto chrome --path=C:\Coursera\Classes\ comnetworks-002
+    Multiple classes:            cs-dlp --cauth-auto chrome --class_names=saas,istoryofrock1-001,algo-2012-002
+    Filter by section name:      cs-dlp --cauth-auto chrome -sf "Chapter_Four" c--class_names=rypto-004
+    Filter by lecture name:      cs-dlp --cauth-auto chrome -lf "3.1_" --class_names=ml-2012-002
+    Download only ppt files:     cs-dlp --cauth-auto chrome -f "ppt" q--class_names=comp-2012-001
+    Get the preview classes:     cs-dlp --cauth-auto chrome -b n--class_names=i-001
+	Download videos at 720p:     cs-dlp --cauth-auto chrome --video-resolution 720p --class_names=ni-001
+    Specify download path:       cs-dlp --cauth-auto chrome --path=C:\Coursera\Classes\ --class_names=comnetworks-002
     Display help:                cs-dlp --help
->>>>>>> original
 
     Maintain a list of classes in a dir:
       Initialize:              mkdir -p CURRENT/{class1,class2,..classN}
